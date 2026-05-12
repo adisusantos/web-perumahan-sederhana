@@ -55,7 +55,7 @@ export function validateTaxYear(year: number): boolean {
  * @returns true jika address valid, false jika tidak
  */
 export function validateAddress(address: string): boolean {
-  return address && address.trim().length > 0;
+  return Boolean(address && address.trim().length > 0);
 }
 
 /**
@@ -64,7 +64,7 @@ export function validateAddress(address: string): boolean {
  * @returns true jika gang valid, false jika tidak
  */
 export function validateGang(gang: string): boolean {
-  return gang && gang.trim().length > 0;
+  return Boolean(gang && gang.trim().length > 0);
 }
 
 /**
@@ -73,5 +73,5 @@ export function validateGang(gang: string): boolean {
  * @returns true jika name valid, false jika tidak
  */
 export function validateName(name: string): boolean {
-  return name && name.trim().length > 0;
+  return Boolean(name && name.trim().length > 0);
 }

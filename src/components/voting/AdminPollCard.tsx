@@ -83,9 +83,7 @@ export function AdminPollCard({ poll, onClose, isClosing = false }: AdminPollCar
             <p className="mt-1 text-sm text-gray-600">{poll.description}</p>
           )}
         </div>
-        <Badge variant={isActive ? "success" : "default"}>
-          {isActive ? "Aktif" : "Selesai"}
-        </Badge>
+        <Badge pollStatus={poll.status} />
       </div>
 
       {/* Metadata */}
